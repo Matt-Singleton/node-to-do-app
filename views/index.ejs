@@ -24,19 +24,26 @@
                 
             </div>
 
+            <!--EJS Below-->
+            <%
+            let ToDoTask = ["Do Work", "Tidy Up", "Buy Food"]; 
+            for (let i = 0; i < ToDoTask.length; i++) {
+            %>
+
+
             <ul id="list">
+
                 <li class="item">
                     <i class="tick-circle"></i>
                     <p class="text">
-                        <%
-                        let ToDoTask = "Do Work"; 
-                        %>
-                        <%= ToDoTask %>
+                        <%= ToDoTask[i] %>
                     </p>
                     <i class="delete-trash"></i>
                 </li>
-            </ul>
                 
+            </ul>
+            <% } %>  
+
             <div class="add-item">
                     
                 <input type="text" id="input" placeholder="Add a Task">
